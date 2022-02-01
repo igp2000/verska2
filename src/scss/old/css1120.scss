@@ -1,0 +1,46 @@
+@import "./vars.scss";
+
+@media screen and (min-width: 1120px) {
+   .header {
+      display: none;
+   }
+
+   .--main-mod {
+      background-color: $color-bg-main;
+      padding-top: 42px;
+   }
+
+   .title--mod {
+      padding-left: 32px;
+   }
+
+   .buttons-1120 {
+      display: flex;
+   }
+
+   .menu__nav {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      &--mod {
+         padding: 0 32px;
+      }
+   }
+
+   .menu__block-right {
+      display: none;
+   }
+
+   .text--mod {
+      padding: 0 32px;
+   }
+
+   .text__txt {
+      width: 44vw;
+      height: 160px;
+   }
+
+   .foto--mod {
+      margin: 0 32px 0 0;
+   }
+}

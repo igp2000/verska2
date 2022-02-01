@@ -1,0 +1,23 @@
+$font-family-main: "TT Lakes";
+
+$color-bg-main: #f8f8f8;
+$border-left-color: #41f6d7;
+$main-nav-border-color: #b8ffec;
+$ellement-bg-color: #ffffff;
+$text-color: #1b1c21;
+$text-light-color: #7e7e82;
+$border-bottom-color: #eaeaea;
+$button-bg-color: #ff3e79;
+$swiper-a-hover-bg-color: #ffeef3;
+$footer-border-top-color: #d9fff5;
+$placeholder-color: #B5B6BC;
+
+@mixin font-main($ff, $fz, $lh, $ls:"") {
+   font-family: $ff;
+   font-size: $fz;
+   line-height: $lh;
+
+   @if $ls != "" {
+    letter-spacing: $ls;
+  }
+}

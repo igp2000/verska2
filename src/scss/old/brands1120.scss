@@ -1,0 +1,50 @@
+@media screen and (min-width: 1120px) {
+
+   .brands__content,
+   .vid_remonta {
+      .button-read {
+         &--mod {
+            margin-left: 39px;
+         }
+      }
+   }
+
+   .brands__title {
+      &--mod {
+         padding: 16px 32px;
+      }
+   }
+
+   .swiper-container,
+   .swiper-container-vid {
+      &--mod {
+         padding: 24px 0 24px 32px;
+      }
+
+      .swiper-wrapper {
+         &::before {
+            width: 223px;
+            margin: 0 32px 16px 0;
+         }
+
+         &:after {
+            width: 240px;
+            margin: 0 32px 16px 0;
+         }
+
+         .swiper-slide {
+            width: 271px;
+            //height: 72px;
+            padding-right: 31px;
+
+            &--order-viewsonic {
+               order: 1;
+            }
+
+            & a {
+               left: 184px;
+            }
+         }
+      }
+   }
+}
