@@ -1,0 +1,15 @@
+@media screen and (min-width: 964px) {
+   .brands {
+      &__content {
+         .swiper-container {
+            .swiper-wrapper {
+               .swiper-slide {
+                  &--order-viewsonic {
+                     order: 1;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
