@@ -1,0 +1,321 @@
+@import "./vars.scss";
+
+.brands {
+   //height: 100%;
+   display: flex;
+   flex-direction: column;
+
+   &__content {
+      flex-grow: 1;
+   }
+}
+
+.section__title {
+   background: linear-gradient(270deg, $ellement-bg-color 0%, $color-bg-main 98.61%);
+   @include font-main($font-family-main, "16px", "24px", "-0.2px");
+   text-transform: uppercase;
+
+   &--mod {
+      margin-top: 16px;
+      padding: 16px;
+      color: $text-light-color;
+   }
+}
+
+.swiper-container,
+.swiper-container-vid {
+
+   &--mod {
+      padding: 16px 0 6px 16px;
+   }
+
+   .swiper-slide {
+      width: 255px;
+      padding-right: 15px;
+      background-color: transparent;
+
+      &--height-72 {
+         height: 72px;
+      }
+
+      &--height-160 {
+         height: 160px;
+      }
+
+      &__div-a {
+         //width: 240px;
+         height: 100%; //72px;
+         border: 1px solid $border-bottom-color;
+         border-radius: 6px;
+         position: relative;
+         background-color: $ellement-bg-color;
+
+         span {
+            display: block;
+            padding: 16px;
+
+            //@include font-main;
+            @include font-main($font-family-main, "16px", "24px", "-0.2px");
+         }
+         .span--color {
+            color: $text-color;
+         }
+      }
+
+      & a {
+         display: block;
+         width: 40px;
+         height: 40px;
+         text-decoration: none;
+         border: 2px solid $button-bg-color;
+         border-radius: 50%;
+         position: absolute;
+         left: 184px;
+
+         transition-property: background-color;
+         transition-duration: 0.5s;
+         transition-timing-function: ease;
+      }
+
+      &.swiper-slide--height-72 a {
+         top: 16px;
+      }
+      &.swiper-slide--height-160 a {
+         top: 104px;
+      }
+
+      & a:hover {
+         background-color: $swiper-a-hover-bg-color;
+      }
+
+      & a::before {
+         content: "";
+         display: block;
+         width: 8px;
+         height: 2px;
+         background-color: $button-bg-color;
+         position: absolute;
+         right: 15px;
+         top: 16px;
+         transform: rotate(45deg);
+      }
+
+      & a::after {
+         content: "";
+         display: block;
+         width: 8px;
+         height: 2px;
+         background-color: $button-bg-color;
+         position: absolute;
+         right: 15px;
+         top: 21px;
+         transform: rotate(135deg);
+      }
+
+      &__lenovo {
+         background: url(../img/brands/lenovo.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__samsung {
+         background: url(../img/brands/samsung.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__apple {
+         background: url(../img/brands/apple.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__bosch {
+         background: url(../img/brands/bosch.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__hp {
+         background: url(../img/brands/hp.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__acer {
+         background: url(../img/brands/acer.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__viewsonic {
+         background: url(../img/brands/viewsonic.png) no-repeat 16px center $ellement-bg-color;
+      }
+      &__sony {
+         background: url(../img/brands/sony.png) no-repeat 16px center $ellement-bg-color;
+      }
+   }
+
+   .menu__block-right {
+      height: 100%; //88px;
+      z-index: 20;
+   }
+}
+
+.swiper-pagination,
+.swiper-pagination-vid {
+   position: static;
+   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+   .brands__content,
+   .vid_remonta {
+      .button-read {
+         &--mod {
+            margin-left: 32px;
+         }
+      }
+   }
+
+   .section__title {
+      &--mod {
+         padding-left: 24px;
+      }
+   }
+
+   .brands__title {
+      &--mod {
+         padding: 16px 24px;
+      }
+   }
+
+   .swiper-container,
+   .swiper-container-vid {
+      //margin: 0;
+      //padding: 24px 0 24px 24px;
+      height: 200px;
+      overflow: hidden;
+
+      &--mod {
+         margin: 0;
+         padding: 24px 0 24px 24px;
+      }
+
+      .swiper-wrapper {
+         display: flex;
+         flex-wrap: wrap;
+         //justify-content: space-between;
+         justify-content: flex-start;
+         margin: 0;
+         padding: 0;
+
+         &:after {
+            content: "";
+            display: block;
+            width: 224px;
+            height: 1px;
+            order: 100;
+            margin: 0 24px 16px 0;
+         }
+
+         .swiper-slide {
+            //margin: 0 24px 16px 0;
+            //width: 224px;
+            margin: 0 0 16px 0;
+            width: 247px;
+            //height: 72px;
+            padding-right: 23px;
+
+            &--order-2 {
+               order: 2;
+            }
+            &--order-3,
+            &--order-viewsonic {
+               order: 3;
+            }
+
+            & a {
+               left: 158px;
+            }
+
+            & a::before {
+               right: 13px;
+               top: 15px;
+            }
+
+            & a::after {
+               right: 13px;
+               top: 20px;
+            }
+         }
+      }
+
+      .menu__block-right {
+         display: none;
+      }
+
+      &--height {
+         height: auto;
+      }
+   }
+
+   .swiper-pagination,
+   .swiper-pagination-vid {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 964px) {
+   .brands {
+      &__content {
+         .swiper-container {
+            .swiper-wrapper {
+               .swiper-slide {
+                  &--order-viewsonic {
+                     order: 1;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1120px) {
+   .brands__content,
+   .vid_remonta {
+      .button-read {
+         &--mod {
+            margin-left: 39px;
+         }
+      }
+   }
+
+   .section__title {
+      &--mod {
+         padding-left: 32px;
+      }
+   }
+
+   .brands__title {
+      &--mod {
+         padding: 16px 32px;
+      }
+   }
+
+   .swiper-container,
+   .swiper-container-vid {
+      &--mod {
+         padding: 24px 0 24px 32px;
+      }
+
+      .swiper-wrapper {
+         &::before {
+            width: 223px;
+            margin: 0 32px 16px 0;
+         }
+
+         &:after {
+            width: 240px;
+            margin: 0 32px 16px 0;
+         }
+
+         .swiper-slide {
+            width: 271px;
+            //height: 72px;
+            padding-right: 31px;
+
+            &--order-viewsonic {
+               order: 1;
+            }
+
+            & a {
+               left: 184px;
+            }
+         }
+      }
+   }
+}
