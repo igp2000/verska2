@@ -1,0 +1,60 @@
+@import "./vars.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 16px 16px 19px 16px;
+  margin-top: 40px;
+  border-top: 1px solid $footer-border-top-color;
+
+  @include font-main($font-family-main, 14px, 16px, "");
+
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+
+  &--color {
+    color: $text-light-color;
+  }
+
+  &__left,
+  &__center,
+  &__right {
+    text-align: center;
+    flex-basis: 33.33%;
+    padding: 0;
+    margin: 0;
+  }
+  &__center {
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    margin-top: 47px;
+    padding: 32px 24px 41px 24px;
+
+    &__left {
+      text-align: left;
+    }
+    &__center {
+      text-align: center;
+      padding: 0;
+    }
+
+    &__right {
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .footer {
+    margin-top: 50px;
+    padding: 32px 32px 21px 32px;
+  }
+}

@@ -1,0 +1,71 @@
+@import "./vars.scss";
+
+.kom-predl {
+  padding: 16px;
+  max-width: 450px;
+
+  @include font-main($font-family-main, 14px, 20px, 0.2px);
+
+  &--color {
+    color: $text-color;
+  }
+
+  &__link {
+    display: block;
+    //@include font-main;
+    @include font-main($font-family-main, 16px, 24px, -0.2px);
+    text-decoration: none;
+    opacity: 1;
+    padding-top: 16px;
+    //position: relative;
+
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    & span {
+      display: inline-block;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: $button-bg-color;
+        position: relative;
+        left: 110px;
+        top: 11px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: $button-bg-color;
+        position: relative;
+        left: 110px;
+        top: -10px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .kom-predl {
+    padding: 24px 0 24px 24px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .kom-predl {
+    padding: 32px 0 32px 32px;
+  }
+}
